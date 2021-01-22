@@ -26,7 +26,7 @@ SECRET_KEY = 'z13a^7(wr&i9k2u=mqnpwi8hzi$6c&=ky)y9crou6%%rm%+ymh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vanshit-g048.explorin.io']
 
 
 # Application definition
