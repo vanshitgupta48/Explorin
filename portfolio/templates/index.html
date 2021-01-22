@@ -1,0 +1,51 @@
+{% block portfolio %} {% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'css/background_styles.css' %}">
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+      <script src="{% static 'js/script.js' %}" defer></script>
+      <style>
+        html{
+          background: url("{% static 'imgs/po63.png' %}") fixed repeat ;
+        }
+        article .abt{
+    color: white;
+    font-weight: 900;
+}
+article .abt:hover{
+    color: brown;
+    font-weight: 900;
+}
+      </style>
+      <title>Portfolio</title>
+    </head>
+    <body>
+      {% load static %}
+      <nav class="navbar">
+        <div class="brand-title"><a href="{% url 'portfolio:index' %}"><img src="{% static 'imgs/logo.jpg' %}" ></a></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="{% url 'portfolio:index' %}" >Home</a></li>
+            <li><a href="{% url 'portfolio:about' %}" >About</a></li>
+            <li><a href="{% url 'portfolio:projects' %}" >Projects</a></li>
+            <li><a href="{% url 'portfolio:contact' %}" >Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <img src="{% static 'imgs/my2.png' %}">
+      </section>
+      <header>
+        <div class="text1">VANSHIT GUPTA</div>
+        <div class="text2">EXPLORER &nbsp;AT&nbsp;EXPLORIN</div>
+      </header>
+      <article><a href="{% url 'portfolio:about' %}" style="text-decoration: none;" class="abt">About me</a></article>
+    </body>
+</html>
+{% endblock portfolio %}

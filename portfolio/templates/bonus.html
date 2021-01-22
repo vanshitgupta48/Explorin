@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="{% static 'js/javascript.js' %}"></script>
+	<style> 
+		.block {
+  display: flex;
+  height: 100vh;
+  background: #df5124;
+}
+.block2{
+	display:flex;
+	border-radius: 20%;
+	height:70vh;
+	width:30vw;
+	background:#efe936;
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+	margin: 100px 300px 100px 500px;
+}
+         .title{ 
+         margin-bottom: 10px; 
+         text-align:center; 
+         width: 210px; 
+         font-size:  40px;
+         color: black; 
+         border: 0px; 
+         padding: 20px 50px 20px 50px;
+	margin: 20px 70px 10px 70px;
+         } 
+     </style>
+</head>
+<body>
+	<div class="block">
+		<div class='block2'>
+             <div >
+             <p class = 'title'>Amount Calculator</p><br>
+             <p clas='block3'>Enter Bill Amount<br>$<input type='numbers' id='firstNumber'></p><br>
+             <p class='block4'>How many people are sharing the bill?<br><input type='numbers' id='secondNumber'></p><br>
+             <p><input type="button" onClick="divideBy()" Value="CALCULATE" /><br><hr>Contribution Per Head=$<span id = "result"></span></p>
+            </div>
+        </div>     
+    </div> 
+</body>
+</html>

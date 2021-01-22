@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <script src="{% static 'js/script.js' %}" defer></script>
+        <style>
+            body{
+                background: url("{% static 'imgs/po63.png' %}");
+            }
+            #contact{
+                margin: 40px;
+            }
+            .headi h1{
+                color: brown;
+                font-size: 100px;
+                font-size: 900
+            }
+            .details{
+                font-size: 25px;
+            }
+            @media (max-width: 800px) {
+                .details{
+                    font-size: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="brand-title"><a href="{% url 'portfolio:index' %}"><img src="{% static 'imgs/logo.jpg' %}" ></a></div>
+            <a href="#" class="toggle-button">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+              <ul>
+                <li><a href="{% url 'portfolio:index' %}" >Home</a></li>
+                <li><a href="{% url 'portfolio:about' %}" >About</a></li>
+                <li><a href="{% url 'portfolio:projects' %}" >Projects</a></li>
+                <li><a href="{% url 'portfolio:contact' %}" >Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+<section class="contact" id="contact">
+    <div class="headi"><h1>Contact.....</h1></div><br>
+    <div class="details">
+    <p>If you desire to contact me, you can reach me via:</p><br>
+    
+    <ul>
+        <li><span>Email:</span>vanshit2485.be20@chitkara.edu.in</li>
+        <li><span>Instagram:</span>@g_vanshit</li>
+        <li><span>Facebook:</span>https://www.facebook.com/vanshit.gupta.1238</li>
+        <li><span>LinkedIn:</span>https://www.linkedin.com/in/vanshit-gupta-2679631ba</li>
+    </ul>
+    </div>
+    <div style="border-radius: 30%;
+    height: 150px;
+    display: flex;
+    flex-wrap: nowrap;"><a href="https://www.facebook.com/1578430879130857/posts/2449927538647849/?d="><img src="{% static 'imgs/fb.png' %}"></a><a href="https://www.twitter.com"><img src="{% static 'imgs/twitter.png' %}"></a><a href="https://www.instagram.com/"><img src="{% static 'imgs/insta.jpg' %}"></a><a href="https://www.linkedin.com/in/vanshit-gupta-2679631ba"><img src="{% static 'imgs/linkedin.png' %}"></a></div>
+</section>
+</body>
+</html>

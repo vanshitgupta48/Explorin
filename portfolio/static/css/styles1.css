@@ -1,0 +1,43 @@
+#box1, #box2,#box3, #box4,#box5, #box6{
+    display: flex;
+    margin: 20px;
+    border: solid black;
+    background-color: orange;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 25%;
+    border-radius: 2%;
+}
+section .btn1{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 10px;
+    background-color: orange;
+    border: solid black;
+}
+section .btn1 a{
+    text-decoration: none;
+    font-weight: 800;
+    border-bottom: none;
+   
+}
+section .btn1:hover{
+    font-size: 25px;
+    background-color: crimson;
+    border:crimson;
+    font: white;
+}
+section .btn1 a:hover{
+    color: white;
+}
+@media (max-width: 800px) {
+    #box1, #box2,#box3, #box4,#box5, #box6{
+        display: flex;
+        margin: 20px;
+        border: solid black;
+        background-color: orange;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 2%;
+    }
+}

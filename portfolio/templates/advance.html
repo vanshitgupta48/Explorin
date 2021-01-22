@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(".subcontainer1").mouseenter(function(){
+      $(".block1").css("background-color","green");
+      $(".block2").css("background-color","purple");
+    $(".subcontainer1").mouseleave(function(){
+      $(".block1").css("background-color","purple");
+      $(".block2").css("background-color","green");
+    });
+    });
+  });
+  $(document).ready(function(){
+    $(".container-1").click(function(){
+    $(".block3").append("Software development is the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components.");
+    });
+  });
+  $(document).ready(function(){
+    $(".container-3").click(function(){
+      $("p").hide()
+      var newImage = $("<img src='{% static 'imgs/sd1.png' %}' alt='Symbol'>");
+      $(".block5").append(newImage);
+      var newImage2 = $("<img src='{% static 'imgs/explorin logo.jpg' %}' alt='Symbol2'>");
+      $(".block6").append(newImage2).height(250).width(250);
+    });
+  });
+  </script>
+	<link rel="stylesheet" href="{% static 'css/adcss.css' %}">
+</head>
+<body>
+<h1> Software Exploration Task </h1>
+		  <div class="container">
+            <div class="container-1">
+                  Header
+            </div>
+            <div class="container-2">
+                  <div class="subcontainer1">
+                      <div class="block1" style="font-size:30px; text-align:center; margin:2px 2px 2px 0; flex:0.5; background-color:purple; padding:40px;">
+                            Hero
+                      </div>
+                      <div class="block2" style="font-size:30px; text-align:center; margin:2px 2px 2px 0; flex:3;background-color:green; padding:40px;">
+                            Sidebar
+                      </div>
+                  </div>
+                  <div class="subcontainer2">
+                      <div class="block3" style="background-color:#FCBE11; font-size:20px; margin:2px 0 2px 2px;
+                      flex:4; padding:40px; text-align:center;">
+                             Main Content<br>
+                      </div>
+                      <div class="block4" style="background-color: #696969; font-size:30px; margin:2px 0 2px 2px;
+                      flex:1; padding:40px; text-align:center;">
+                            Extra Content
+                      </div>
+                  </div>
+            </div>
+            <div class="container-3">
+                <div class="block5" style="background-color:#03C04A ; font-size:15px;
+                margin:2px 0 2px 2px; flex:3; padding:40px; text-align:center;">
+                    <p>Related Images</p>
+                </div>
+                <div class="block6" style="background-color:lightpink; font-size:25px; margin:2px 0 2px 2px; flex:1;
+                padding:40px; text-align:center; ">
+                   EXPLORIN PROGRAM<br>
+                </div>
+            </div>
+            <div class="container-4">
+                Footer
+            </div>
+        </div>
+</body>
+</html>

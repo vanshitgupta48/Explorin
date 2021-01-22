@@ -1,0 +1,155 @@
+body{
+	background:url('imgs/po63.png');
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  padding: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.navbar .logo img{
+ padding-top: 15px;
+ padding-left: 15px;
+
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  color: #fff;
+  font-size: 22px;
+  font-weight: 1000;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-decoration: none;
+}
+.navbar{
+  padding:10px;
+}
+.navbar .menu li a:hover{
+  color: crimson;
+}
+body .my{
+	height:250px;
+	width:250px;
+	border-radius: 50%;
+}
+#pro{
+  text-align: center;
+  background-color: none;
+  color: brown;
+  font-weight: 700;
+}
+#tab{
+	align-content: center;
+}
+#panel, #flip { 
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  height: 2%;
+  width:50%;
+}
+#panel {
+  display: none;
+  background-color:black;
+  border:solid aqua;  
+  font-size: 20px;
+  color:aqua;
+  height: 2%;
+  width:50%;
+  padding: 30px 0px;
+}
+#panel2, #flip2 {
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  height: 2%;
+  width:50%; 
+}
+#panel2 {
+  display: none;
+  background-color:black;
+  border:solid aqua;  
+  font-size: 20px;
+  color:aqua;
+  height: 2%;
+  width:50%;
+  padding: 30px 0px;
+}
+#panel3, #flip3, #panel5, #flip5{
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  height: 2%;
+  width:50%; 
+}
+#panel3, #panel5 {
+  display: none;
+  background-color:black;
+  border:solid aqua;  
+  font-size: 20px;
+  color:aqua;
+  height: 2%;
+  width:50%;
+  padding: 30px 0px;
+}
+#panel4, #flip4 {
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  height: 2%;
+  width:50%;
+}
+.space{
+  padding: 0px 30px;
+  text-align: center;
+  font: bold;
+}
+#panel4 {
+  display: none;
+  background-color:black;
+  border:solid aqua;  
+  color:aqua;
+  height: 2%;
+  width:50%;
+  padding: 30px 35px;
+}
+#panel4 table{
+  margin-left:20px;
+  font-size: 25px;
+}
+#flip,#flip2,#flip3,#flip4,#flip5{
+	background-color: rgb(243, 163, 13);
+    border: solid  brown;
+    color: brown;
+    font-weight: 1500;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.4s;
+}
+.active, #flip:hover,#flip2:hover,#flip3:hover,#flip4:hover,#flip5:hover {
+    background-color:  rgb(241, 160, 85);
+    color: black;
+    border: solid  black;
+  }
+  #panel,#panel2,#panel3,#panel4,#panel5{
+   
+    border: solid  black;
+    
+    background-color: rgb(241, 160, 85);
+    color: black;
+  }
+  @media (max-width: 800px) {
+    #panel4 table{
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+  }
+  }

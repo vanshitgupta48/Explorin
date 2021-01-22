@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+}
+
+html {
+    background: url("{% static './imgs/po63.png' %}") fixed repeat ;
+    
+}

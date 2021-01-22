@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script> 
+     $(document).ready(function(){
+       $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+       });
+     });
+      $(document).ready(function(){
+       $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+       });
+     });
+      $(document).ready(function(){
+       $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+       });
+     });
+      $(document).ready(function(){
+       $("#flip4").click(function(){
+        $("#panel4").slideToggle("slow");
+       });
+     });
+     $(document).ready(function(){
+       $("#flip5").click(function(){
+        $("#panel5").slideToggle("slow");
+       });
+     });
+     </script>
+     <style>
+      html{
+        background: url("{% static 'imgs/po63.png' %}") fixed repeat ;
+      }
+    </style>
+     <link rel="stylesheet"  type="text/css" href="{% static 'css/styl1.css' %}">
+     <link rel="stylesheet"  type="text/css" href="{% static 'css/styles.css' %}">
+     <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand-title"><a href="{% url 'portfolio:index' %}"><img src="{% static 'imgs/logo.jpg' %}" ></a></div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="{% url 'portfolio:index' %}" >Home</a></li>
+        <li><a href="{% url 'portfolio:about' %}" >About</a></li>
+        <li><a href="{% url 'portfolio:projects' %}" >Projects</a></li>
+        <li><a href="{% url 'portfolio:contact' %}" >Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+    <center>
+	<img class="my" src="{% static 'imgs/my.jpg' %}" alt='person image'>
+	<div id="pro"><h1><b>ABOUT</b></h1></div></center>
+    <hr>
+    <center>
+	<div id="flip" border="solid black"><h2>Introduction</h2></div>
+	<div id="panel"><b>I am Vanshit Gupta.I am pursuing B.tech in Computer Science and Engineering.I am exploring my interest in  software development.</b></div>
+
+	<div id="flip2"> <h2>Reasons to join Explorin</h2></div>
+	<div id="panel2"><b>I was so much confuse for my future. I want to know whether software development interests me or not. I need proper guidance and good mentor. After finding my interest i will work hard to follow the roadmap given by Explorin Team to achieve my goals.</b> </div>
+    
+	<div id="flip4"><h2 >Education</h2></div>
+	<div id="panel4">
+	    <table border="5">
+         <tr >
+           <th class='space'><u>class<u></th>
+           <th class='space'><u>Board/University Name<u></th>
+           <th class='space'><u>Marks/CGPA<u></th>
+         </tr>
+         <tr>
+           <td class='space'>X</td>
+           <td class='space'>CBSE</td>
+           <td class='space'>90.2%</td>
+         </tr>
+         <tr>
+           <td class='space'>XII</td>
+           <td class='space'>CBSE</td>
+           <td class='space'>91.2%</td>
+         </tr>
+          <tr>
+           <td class='space'>B.tech</td>
+           <td class='space'>Chitkara University</td>
+           <td class='space'>currently studing</td>
+         </tr>
+         </table>
+    </div>
+    <div id="flip3"><h2 >Journey Till now</h2></div>
+    <div id="panel3"><b>Journey till now remains fantastic. I wonder that in one month we have learned lot of basic things of software development. We face my challenges and under the best mentors we have complete all of them.I felt lucky to join this program.</div>
+
+    <div id="flip5"><h2>Technologies learnt</h2></div>
+    <div id="panel5"><b>We have learnd lot of technologies such as HTML, CSS, JAVASCRIPT, jQuery, MySQL, AJAX, PHP and many more we are going to explore.</b></div>
+    </center>
+</body>
+</html>

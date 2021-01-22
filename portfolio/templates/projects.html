@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+              background: url("{% static 'imgs/po63.png' %}") fixed repeat ;
+            }
+          </style>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+      <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+      <script src="{% static 'js/script.js' %}" defer></script>
+      <title>Portfolio</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="brand-title"><a href="{% url 'portfolio:index' %}"><img src="{% static 'imgs/logo.jpg' %}" ></a></div>
+            <a href="#" class="toggle-button">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+              <ul>
+                <li><a href="{% url 'portfolio:index' %}" >Home</a></li>
+                <li><a href="{% url 'portfolio:about' %}" >About</a></li>
+                <li><a href="{% url 'portfolio:projects' %}" >Projects</a></li>
+                <li><a href="{% url 'portfolio:contact' %}" >Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+      <header style="display: flex;justify-content: center;text-align: center;text-align: center;">
+          <div style="font-size: 80px;font-weight: 900;color: brown;">****Projects****</div>
+      </header>
+      <section>
+        <div class="container2">
+            <div id="box1"><h2>Flexbox &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Day 3 Task</h2><br>
+                      <table>
+                          <tr>
+                             <th>Experience:</th>
+                             <td>It  is quite challenging task but enjoyable too.As it is our first task, it builds our interest to know more about HTML.</td>
+                          </tr>
+                          <tr>
+                              <th>Technology Used:</th>
+                              <td>Basics of HTML, CSS and JAVASCRIPT</td>
+                          </tr>
+                          <tr>
+                              <th>Time taken:</th>
+                              <td>It takes about 3-4 hours.</td>
+                          </tr>
+                      </table>
+                      <button class="btn1"><a href="{% url 'portfolio:flexbox' %}">Flexbox</a></button>
+                   </div>
+           <div id="box2"><h2>Basic Splitwise &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Day 4 Task</h2><br>
+                      <table>
+                          <tr>
+                             <th>Experience:</th>
+                             <td>Here it comes totally new thing i.e use of javascript in  making amount calculator.It's quite enjoyable task as we make our own a small calculator.</td>
+                          </tr>
+                          <tr>
+                              <th>Technology Used:</th>
+                              <td>More Functions of HTML, CSS and JAVASCRIPT</td>
+                          </tr>
+                          <tr>
+                              <th>Time taken:</th>
+                              <td>It takes about 3 hours.</td>
+                          </tr>
+                      </table>
+                      <button class="btn1"><a href="{% url 'portfolio:bonus' %}">Calculator</a></button>
+                   </div>
+               </div>
+              <div class="container1">
+            <div id="box3"><h2>My First Website &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Week 1 Task</h2><br>
+                      <table>
+                          <tr>
+                             <th>Experience:</th>
+                             <td>And here it comes our first Website.Yes...here it is which we have made our own which we can say, is a conclusion of all the learnings we did throughout the week.</td>
+                          </tr>
+                          <tr>
+                              <th>Technology Used:</th>
+                              <td>All the properties of HTML, CSS and JAVASCRIPT</td>
+                          </tr>
+                          <tr>
+                              <th>Time taken:</th>
+                              <td>It takes about 4 hours.</td>
+                          </tr>
+                      </table>
+                      <button class="btn1"><a href="{% url 'portfolio:project1' %}">Website</a></button>
+                   </div>
+           <div id="box4"><h2>Flexbox Advance &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Day 11 Task</h2><br>
+                      <table>
+                          <tr>
+                             <th>Experience:</th>
+                             <td>It is quite amazing task.In this we add more properties to our previously build flexbox using jQuery.It is quite interesting too.</td>
+                          </tr>
+                          <tr>
+                              <th>Technology Used:</th>
+                              <td>Basics of SQL and jQuery</td>
+                          </tr>
+                          <tr>
+                              <th>Time taken:</th>
+                              <td>It takes about 3 hours.</td>
+                          </tr>
+                      </table>
+                      <button class="btn1"><a href="{% url 'portfolio:advance' %}">Flexbox Advance</a></button>
+                   </div>
+               </div>
+               <div class="container3">
+            <div id="box5"><h1>Youtube API  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Day 11 Task</h1><br>
+                      <table>
+                          <tr>
+                             <th>Experience:</th>
+                             <td>Here it comes completely new thing "API".It is quite difficult task but after the task is complete the feeling was like just we have achieve something big.</td>
+                          </tr>
+                          <tr>
+                              <th>Technology Used:</th>
+                              <td>Complete  concepts of jQuery, AJAX and API.</td>
+                          </tr>
+                          <tr>
+                              <th>Time taken:</th>
+                              <td>It takes about complete half of the day.</td>
+                          </tr>
+                      </table>
+                      <button class="btn1"><a href="{% url 'portfolio:week2bonus' %}">Videos</a></button>
+                   </div>
+           <div id="box6"><h2>My First Login Page&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Day 12 Task</h2><br>
+                      <table>
+                          <tr>
+                             <th>Experience:</th>
+                             <td>And finally we came accross the most enjoyable thing i.e making our own registration and login form.Moreover fetching filed data is quite challenging.</td>
+                          </tr>
+                          <tr>
+                              <th>Technology Used:</th>
+                              <td>Basics of Backend using PHP.</td>
+                          </tr>
+                          <tr>
+                              <th>Time taken:</th>
+                              <td>It takes about whole day.</td>
+                          </tr>
+                      </table>
+                      <button class="btn1"><a href="{% url 'portfolio:video' %}">Login Form</a></button>
+                   </div>
+               </div>
+      </section>
+    </body>
+</html>

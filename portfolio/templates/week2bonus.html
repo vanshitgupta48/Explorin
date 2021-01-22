@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<style type="text/css">
+	#page{
+		background-color: grey;
+	}
+	#box{	
+	background-color: black;
+	border:solid aqua;
+	color:white;
+	justify-content: center;align-items: center;text-align: center;
+	font-size: 20px
+	}		
+</style> 
+</head>
+<body id="page">
+	   <div id="box">
+       <h1 class="animated infinite heartBeat delay-1s">VIDEOS</h1><br>
+       </div>
+       	<div>
+        
+       <iframe id="player" width="495" height="315" src="https://www.youtube.com/embed/Sd-YsMs3OzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+       <iframe width="495" height="315" src="https://www.youtube.com/embed/2Yk9puTCHlQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="495" height="315" src="https://www.youtube.com/embed/2err3xKs4lI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+       <iframe width="495" height="315" src="https://www.youtube.com/embed/o7mdzUtCZPw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="495" height="315" src="https://www.youtube.com/embed/9vqtF68SkRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="495" height="315" src="https://www.youtube.com/embed/5CoKwpezDFE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+       <script>
+         	$(document).ready(function(){
+		$.ajax({
+			type:"GET",
+			url:"https://www.googleapis.com/youtube/v3/search",
+			data:{
+				part:'snippet',
+				type:'video',
+                videoEmbeddable:true,
+                channelId:"UCBqFKDipsnzvJdt6UT0lMIg",
+                key:"AIzaSyDE-SFPTfipRf-zFm_ruZWAKmIJsgCxGqk",
+                maxResult:6,
+			},
+			success: function(data){
+				$.each(data.items, function(i,item){
+					var link = item.videoId;
+
+			    $('.vid').append("<iframe width='495' height='315' src='https://www.youtube.com/embed/' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>" +link+"</iframe>")
+				})
+			},
+			error: function(data){
+				console.log("error");
+			}
+		});
+	});
+       </script>
+   </div>
+</body>
+</html>

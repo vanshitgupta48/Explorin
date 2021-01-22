@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    </head>
+<body>
+{% load static %}
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" id="main-navbar" style="background-color: #f1f14f;">
+    <div class="container"><div style="font-family: 'Aclonica';font-size: 30px;font-weight: 100;">Funnygram</div>
+        <a class="navbar-brand pr-3" style="border-right: 1px solid #f8e17a;" href="{% url "posts:feed" %}">
+            <img src="{% static 'img/funny.png' %}" height="45" class="d-inline-block align-top"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    {% if request.user.profile.picture %}
+                        <a href="{% url "users:detail" request.user.username %}">
+                            <img src="{{ request.user.profile.picture.url }}" height="45" class="d-inline-block align-top rounded-circle"/>
+                        </a>    
+                    {% else %}
+                        <img src="{% static 'img/default-profile.png' %}" height="45" class="d-inline-block align-top rounded-circle"/>
+                    {% endif %}
+                    <a href="{% url "users:detail" request.user.username %}" style="color:inherit;text-decoration:inherit;font-weight: 200;" >
+                        <i class="lead" style="font-weight: 500px;font-size: 30px;">{{request.user.username}}</i>
+                    </a>
+                </li>
+                <div style="margin-left: 200px;display: flex; flex-wrap: wrap;">
+                <li class="nav-item nav-icon" id="bt">
+                    <a href="{% url "posts:feed" %}" >
+                        <button style="cursor: pointer; background-color: white;border-radius: 50%;" id="bt">Chats</button>
+                        
+                    </a>
+                </li>
+                <li class="nav-item nav-icon" id="bt">
+                    <a href="{% url "posts:feed" %}" >
+                        <button style="cursor: pointer; background-color: white;border-radius: 50%;" id="bt">Home</button>
+                        
+                    </a>
+                </li>
+                <li class="nav-item nav-icon">
+                    <a href="{% url "posts:create_post" %}" >
+                        <button style="cursor: pointer; background-color: white;border-radius: 50%;" id="bt">Add Post</button>
+                        
+                    </a>
+                </li>
+
+                <li class="nav-item nav-icon">
+                    <a href="{% url "users:logout" %}">
+                        <button  style="cursor: pointer;background-color: white;border-radius: 50%;" id="bt">Logout</button>
+                        
+                    </a>
+                </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
