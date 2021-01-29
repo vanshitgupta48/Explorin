@@ -1,7 +1,7 @@
 {% extends "users/base.html" %}
 
 {% block head_content %}
-    <title>Login - Platzigram</title>
+    <title>Login</title>
 {% endblock head_content %}
 
 {% block container %}
@@ -33,6 +33,6 @@
 		<button type="submit" class="btn btn-outline-info btn-block mt-5"><i class="lead">Login</i></button>	
 	</form>
 	<div class="mx-auto mt-1" style="width: 300px;">
-		<p>Don't have an account?? <a href="{% url "users:signup" %}">Create Here</a></p>
+		<p>Don't have account?? <a href="{% url "users:signup" %}">Create Here</a></p>
 	</div>
 {% endblock container %}
