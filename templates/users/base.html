@@ -9,28 +9,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-    <style>
-        .headi{
-            font-size: 50px;
-            font-weight: 600;
-            padding-bottom: 20px;
-            padding-left: 50px;
-            font-family: 'Aclonica';
-        }
-        #logo{
-            width: 90px;
-            height: 70px;
-            margin: 20px;
-            margin-left: 130px;
-        }
-    </style>
 </head>
 <body class="h-100" style="background-color: #f1f14f;">
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-sm-12 col-md-5 col-lg-5 pt-2 pl-5 pr-5 pb-5 border-info rounded" id="auth-container">
-            <img src="{% static 'img/funny.png' %}"  id="logo">
-            <div class="headi">Funnygram</div>
+            <div class="row justify-content-md-center" style="font-size: 40px;font-weight: 900;margin-top: 30px;" ><img src="{% static 'img/funny.png' %}" class="row justify-content-md-center" style="width: 90px;
+                height: 70px;">&nbsp;Funnygram</div>
                 {% block container %}{% endblock%}
 
             </div>
