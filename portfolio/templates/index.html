@@ -3,6 +3,7 @@
 <html>
     <head>
       <link rel="stylesheet" href="{% static 'css/background_styles.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
       <link rel="stylesheet" href="{% static 'css/styles.css' %}">
       <script src="{% static 'js/script.js' %}" defer></script>
       <style>
@@ -16,6 +17,39 @@
 article .abt:hover{
     color: brown;
     font-weight: 900;
+}
+          footer {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    background-color: brown;
+    font: white;
+    border: 8px solid white;
+    margin-top: 20px;
+    margin-left: 41%;
+    font-size: 30px;
+}
+footer a{
+  color: white;
+  font-weight: 900;
+}
+          @media (max-width: 800px) {
+  footer {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    background-color: brown;
+    font: white;
+    border: 5px solid white;
+    margin-top: 20px;
+    margin-left: 25%;
+  }
+  footer a{
+    color: white;
+    font-weight: 900;
+  }
 }
       </style>
       <title>Portfolio</title>
@@ -46,6 +80,9 @@ article .abt:hover{
         <div class="text2">EXPLORER &nbsp;AT&nbsp;EXPLORIN</div>
       </header>
       <article><a href="{% url 'portfolio:about' %}" style="text-decoration: none;" class="abt">About me</a></article>
+      <footer>
+        <a href="{% url 'users:login' %}"  class="animated infinite heartBeat delay-3s" style="text-decoration: none;display: flex;">MASTER PROJECT</a>
+      </footer>
     </body>
 </html>
 {% endblock portfolio %}
